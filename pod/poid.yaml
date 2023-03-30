@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: poid
+
+spec:
+  containers:
+  - image: poistargram/poid
+    name: poid
+    ports:
+    - containerPort: 8080
+      protocol: TCP
