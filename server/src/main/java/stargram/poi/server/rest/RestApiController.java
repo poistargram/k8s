@@ -14,6 +14,7 @@ public class RestApiController {
 
 	@GetMapping
 	public void resource(@RequestParam("value") String value){
+		Counter.count++;
 		log.info("Hello, {}!", value);
 	}
 }

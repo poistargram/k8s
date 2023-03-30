@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: poirc
+spec:
+  containers:
+  - image: poistargram/poirc
+    name: poirc-image
+    livenessProbe:
+      httpGet:
+        path: /error
+        port: 8080
