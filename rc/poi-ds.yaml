@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+    name: poi-ds
+spec:
+    selector:
+        matchLabels:
+            poi: poid
+    template:
+        metadata:
+            labels:
+                poi: poid
+        spec:
+            nodeSelector:
+                poi: worker
+            containers:
+            - name: poid
+              image: poistargram/poid
+
