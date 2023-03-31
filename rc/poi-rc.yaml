@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: poi-rc
+spec:
+  replicas: 3
+  selector:
+    poi: handsome
+  template:
+    metadata:
+      labels:
+        poi: handsome
+    spec:
+      containers:
+      - name: poid
+        image: poistargram/poid
+        ports:
+        - containerPort: 8080
