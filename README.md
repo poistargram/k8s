@@ -17,13 +17,31 @@
 > 
 
 ## [2일차] 레플리케이션과 컨드롤러
-### 2023년 3월 26일
+### 2023년 3월 30일
 - [ ] https://yousrain.tistory.com/95
 
 >
 
 ## [3일차] 서비스
-### 2023년 3월 27일
+### 2023년 3월 31일
 - [ ] https://yousrain.tistory.com/96
+
+>
+
+## [3일차] 볼륨
+### 2023년 3월 일
+- [ ] https://yousrain.tistory.com/97
+
+>
+
+## [3일차] 컨피그맵과 시크릿
+### 2023년 3월 일
+- [ ] https://yousrain.tistory.com/98
+
+>
+
+## [3일차] 애플리케이션에서 리소스 액세스
+### 2023년 3월 일
+- [ ] https://yousrain.tistory.com/99
 
 >
