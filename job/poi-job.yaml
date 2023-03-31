@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+    name: poi-job
+spec:
+    template:
+        metadata:
+            labels:
+                poi: job
+        spec:
+            restartPolicy: OnFailure
+            containers:
+            - name: poid
+              image: poistargram/console

@@ -1,0 +1,17 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata: 
+    name: poi-cron-job
+spec:
+    schedule: "30 * * * *"
+    jobTemplate:
+        spec:
+            template:
+                metadata:
+                    labels:
+                        poi: job
+                spec:
+                    restartPolicy: OnFailure
+                    containers:
+                    - name: poid
+                      image: poistargram/console
