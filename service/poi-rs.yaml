@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata: 
+  name: poi-rs
+
+spec:
+  replicas: 3
+  selector: 
+    matchLabels:
+      poi: minam
+  template:
+    metadata:
+      labels:
+        poi: minam
+    spec:
+      containers:
+      - name: poid
+        image: poistargram/poid 
+        ports:
+        - name: phttp
+          containerPort: 8080

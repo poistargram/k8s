@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata: 
+  name: poi-readiness
+
+spec:
+  replicas: 1
+  selector: 
+    matchLabels:
+      poi: ready
+  template:
+    metadata:
+      labels:
+        poi: ready
+    spec:
+      containers:
+      - name: poid
+        image: poistargram/readiness 
+        readinessProbe:
+          httpGet:
+            path: /readiness
+            port: 8080
+        ports:
+        - name: phttp
+          containerPort: 8080
