@@ -12,30 +12,30 @@
 
 ## [1일차] 환경 설정과 파드 복습
 ### 2023년 3월 25일
-- [ ] https://yousrain.tistory.com/86
+- [x] https://yousrain.tistory.com/86
 
 > 
 
 ## [2일차] 레플리케이션과 컨드롤러
 ### 2023년 3월 30일
-- [ ] https://yousrain.tistory.com/95
+- [x] https://yousrain.tistory.com/95
 
 >
 
 ## [3일차] 서비스
-### 2023년 3월 31일
-- [ ] https://yousrain.tistory.com/96
+### 2023년 3월 30일 4월 2일
+- [x] https://yousrain.tistory.com/96
 
 >
 
 ## [3일차] 볼륨
-### 2023년 3월 일
-- [ ] https://yousrain.tistory.com/97
+### 2023년 4월 4-5일
+- [x] https://yousrain.tistory.com/97
 
 >
 
-## [3일차] 컨피그맵과 시크릿
-### 2023년 3월 일
+## [4일차] 컨피그맵과 시크릿
+### 2023년 4월6- 일
 - [ ] https://yousrain.tistory.com/98
 
 >

@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata: 
+  name: poi-rs
+
+spec:
+  replicas: 1
+  selector: 
+    matchLabels:
+      poi: minam
+  template:
+    metadata:
+      labels:
+        poi: minam
+    spec:
+      volumes:
+        - name: polume
+          persistentVolumeClaim:
+            claimName: poi-pvc
+      containers:
+      - name: poi-writer
+        image: poistargram/writer 
+        volumeMounts: 
+          - name: polume
+            mountPath: /poi/minam
+        ports:
+        - name: whttp
+          containerPort: 8080
+      - name: poi-reader
+        image: poistargram/reader 
+        volumeMounts: 
+          - name: polume
+            mountPath: /poi/handsome
+        ports:
+        - name: rhttp
+          containerPort: 8081

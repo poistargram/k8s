@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: poi-service
+spec:
+    ports:
+    - port: 80
+      targetPort: whttp
+      name: ahttp
+    - port: 81
+      targetPort: rhttp
+      name: bhttp
+    selector:
+        poi: minam
