@@ -1,0 +1,31 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: poi-ingress
+  annotations:
+    kubernetes.io/ingress.class: poi
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/use-regex: "true"
+spec:
+  tls:
+    - hosts:
+      - poi-test.dev.9rum.cc
+      secretName: poi-secret
+  rules:
+    - host: poi-test.dev.9rum.cc
+      http:
+        paths:
+          - path: /a(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: poi-service
+                port:
+                  name: fhttp
+          - path: /b(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: poi-service
+                port:
+                  name: shttp

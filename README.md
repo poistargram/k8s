@@ -37,8 +37,8 @@
 >
 
 ## [4일차] 컨피그맵과 시크릿
-### 2023년 4월6- 일
-- [ ] https://yousrain.tistory.com/98
+### 2023년 4월6- 12일
+- [x] https://yousrain.tistory.com/98
 
 >
 
