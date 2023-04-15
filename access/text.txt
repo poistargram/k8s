@@ -1,0 +1,1167 @@
+{
+  "kind": "JobList",
+  "apiVersion": "batch/v1",
+  "metadata": {
+    "selfLink": "/apis/batch/v1/jobs",
+    "resourceVersion": "6713731"
+  },
+  "items": [
+    {
+      "metadata": {
+        "name": "poi-cron-job-1681540200",
+        "namespace": "default",
+        "selfLink": "/apis/batch/v1/namespaces/default/jobs/poi-cron-job-1681540200",
+        "uid": "21a1fc70-0751-45b2-b0a7-fee2434ce418",
+        "resourceVersion": "6658871",
+        "creationTimestamp": "2023-04-15T06:30:03Z",
+        "labels": {
+          "controller-uid": "21a1fc70-0751-45b2-b0a7-fee2434ce418",
+          "job-name": "poi-cron-job-1681540200",
+          "poi": "job"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "batch/v1beta1",
+            "kind": "CronJob",
+            "name": "poi-cron-job",
+            "uid": "4b16af6c-8e7e-4344-b178-11a3ded1b5d5",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "batch/v1",
+            "time": "2023-04-15T06:30:27Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {"f:metadata":{"f:labels":{".":{},"f:poi":{}},"f:ownerReferences":{".":{},"k:{\"uid\":\"4b16af6c-8e7e-4344-b178-11a3ded1b5d5\"}":{".":{},"f:apiVersion":{},"f:blockOwnerDeletion":{},"f:controller":{},"f:kind":{},"f:name":{},"f:uid":{}}}},"f:spec":{"f:backoffLimit":{},"f:completions":{},"f:parallelism":{},"f:template":{"f:metadata":{"f:labels":{".":{},"f:poi":{}}},"f:spec":{"f:containers":{"k:{\"name\":\"poid\"}":{".":{},"f:image":{},"f:imagePullPolicy":{},"f:name":{},"f:resources":{},"f:terminationMessagePath":{},"f:terminationMessagePolicy":{}}},"f:dnsPolicy":{},"f:restartPolicy":{},"f:schedulerName":{},"f:securityContext":{},"f:terminationGracePeriodSeconds":{}}}},"f:status":{"f:completionTime":{},"f:conditions":{".":{},"k:{\"type\":\"Complete\"}":{".":{},"f:lastProbeTime":{},"f:lastTransitionTime":{},"f:status":{},"f:type":{}}},"f:startTime":{},"f:succeeded":{}}}
+          }
+        ]
+      },
+      "spec": {
+        "parallelism": 1,
+        "completions": 1,
+        "backoffLimit": 6,
+        "selector": {
+          "matchLabels": {
+            "controller-uid": "21a1fc70-0751-45b2-b0a7-fee2434ce418"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "controller-uid": "21a1fc70-0751-45b2-b0a7-fee2434ce418",
+              "job-name": "poi-cron-job-1681540200",
+              "poi": "job"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "poid",
+                "image": "poistargram/console",
+                "resources": {
+                  
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "Always"
+              }
+            ],
+            "restartPolicy": "OnFailure",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "securityContext": {
+              
+            },
+            "schedulerName": "default-scheduler"
+          }
+        }
+      },
+      "status": {
+        "conditions": [
+          {
+            "type": "Complete",
+            "status": "True",
+            "lastProbeTime": "2023-04-15T06:30:27Z",
+            "lastTransitionTime": "2023-04-15T06:30:27Z"
+          }
+        ],
+        "startTime": "2023-04-15T06:30:03Z",
+        "completionTime": "2023-04-15T06:30:27Z",
+        "succeeded": 1
+      }
+    },
+    {
+      "metadata": {
+        "name": "poi-cron-job-1681543800",
+        "namespace": "default",
+        "selfLink": "/apis/batch/v1/namespaces/default/jobs/poi-cron-job-1681543800",
+        "uid": "115fe8e8-bc50-42ed-b64e-36f7e1bb4ee6",
+        "resourceVersion": "6677212",
+        "creationTimestamp": "2023-04-15T07:30:02Z",
+        "labels": {
+          "controller-uid": "115fe8e8-bc50-42ed-b64e-36f7e1bb4ee6",
+          "job-name": "poi-cron-job-1681543800",
+          "poi": "job"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "batch/v1beta1",
+            "kind": "CronJob",
+            "name": "poi-cron-job",
+            "uid": "4b16af6c-8e7e-4344-b178-11a3ded1b5d5",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "batch/v1",
+            "time": "2023-04-15T07:30:26Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {"f:metadata":{"f:labels":{".":{},"f:poi":{}},"f:ownerReferences":{".":{},"k:{\"uid\":\"4b16af6c-8e7e-4344-b178-11a3ded1b5d5\"}":{".":{},"f:apiVersion":{},"f:blockOwnerDeletion":{},"f:controller":{},"f:kind":{},"f:name":{},"f:uid":{}}}},"f:spec":{"f:backoffLimit":{},"f:completions":{},"f:parallelism":{},"f:template":{"f:metadata":{"f:labels":{".":{},"f:poi":{}}},"f:spec":{"f:containers":{"k:{\"name\":\"poid\"}":{".":{},"f:image":{},"f:imagePullPolicy":{},"f:name":{},"f:resources":{},"f:terminationMessagePath":{},"f:terminationMessagePolicy":{}}},"f:dnsPolicy":{},"f:restartPolicy":{},"f:schedulerName":{},"f:securityContext":{},"f:terminationGracePeriodSeconds":{}}}},"f:status":{"f:completionTime":{},"f:conditions":{".":{},"k:{\"type\":\"Complete\"}":{".":{},"f:lastProbeTime":{},"f:lastTransitionTime":{},"f:status":{},"f:type":{}}},"f:startTime":{},"f:succeeded":{}}}
+          }
+        ]
+      },
+      "spec": {
+        "parallelism": 1,
+        "completions": 1,
+        "backoffLimit": 6,
+        "selector": {
+          "matchLabels": {
+            "controller-uid": "115fe8e8-bc50-42ed-b64e-36f7e1bb4ee6"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "controller-uid": "115fe8e8-bc50-42ed-b64e-36f7e1bb4ee6",
+              "job-name": "poi-cron-job-1681543800",
+              "poi": "job"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "poid",
+                "image": "poistargram/console",
+                "resources": {
+                  
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "Always"
+              }
+            ],
+            "restartPolicy": "OnFailure",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "securityContext": {
+              
+            },
+            "schedulerName": "default-scheduler"
+          }
+        }
+      },
+      "status": {
+        "conditions": [
+          {
+            "type": "Complete",
+            "status": "True",
+            "lastProbeTime": "2023-04-15T07:30:26Z",
+            "lastTransitionTime": "2023-04-15T07:30:26Z"
+          }
+        ],
+        "startTime": "2023-04-15T07:30:02Z",
+        "completionTime": "2023-04-15T07:30:26Z",
+        "succeeded": 1
+      }
+    },
+    {
+      "metadata": {
+        "name": "poi-cron-job-1681547400",
+        "namespace": "default",
+        "selfLink": "/apis/batch/v1/namespaces/default/jobs/poi-cron-job-1681547400",
+        "uid": "4d68a261-73d9-4515-ae81-956f298d3fac",
+        "resourceVersion": "6695556",
+        "creationTimestamp": "2023-04-15T08:30:00Z",
+        "labels": {
+          "controller-uid": "4d68a261-73d9-4515-ae81-956f298d3fac",
+          "job-name": "poi-cron-job-1681547400",
+          "poi": "job"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "batch/v1beta1",
+            "kind": "CronJob",
+            "name": "poi-cron-job",
+            "uid": "4b16af6c-8e7e-4344-b178-11a3ded1b5d5",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "batch/v1",
+            "time": "2023-04-15T08:30:24Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {"f:metadata":{"f:labels":{".":{},"f:poi":{}},"f:ownerReferences":{".":{},"k:{\"uid\":\"4b16af6c-8e7e-4344-b178-11a3ded1b5d5\"}":{".":{},"f:apiVersion":{},"f:blockOwnerDeletion":{},"f:controller":{},"f:kind":{},"f:name":{},"f:uid":{}}}},"f:spec":{"f:backoffLimit":{},"f:completions":{},"f:parallelism":{},"f:template":{"f:metadata":{"f:labels":{".":{},"f:poi":{}}},"f:spec":{"f:containers":{"k:{\"name\":\"poid\"}":{".":{},"f:image":{},"f:imagePullPolicy":{},"f:name":{},"f:resources":{},"f:terminationMessagePath":{},"f:terminationMessagePolicy":{}}},"f:dnsPolicy":{},"f:restartPolicy":{},"f:schedulerName":{},"f:securityContext":{},"f:terminationGracePeriodSeconds":{}}}},"f:status":{"f:completionTime":{},"f:conditions":{".":{},"k:{\"type\":\"Complete\"}":{".":{},"f:lastProbeTime":{},"f:lastTransitionTime":{},"f:status":{},"f:type":{}}},"f:startTime":{},"f:succeeded":{}}}
+          }
+        ]
+      },
+      "spec": {
+        "parallelism": 1,
+        "completions": 1,
+        "backoffLimit": 6,
+        "selector": {
+          "matchLabels": {
+            "controller-uid": "4d68a261-73d9-4515-ae81-956f298d3fac"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "controller-uid": "4d68a261-73d9-4515-ae81-956f298d3fac",
+              "job-name": "poi-cron-job-1681547400",
+              "poi": "job"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "poid",
+                "image": "poistargram/console",
+                "resources": {
+                  
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "Always"
+              }
+            ],
+            "restartPolicy": "OnFailure",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "securityContext": {
+              
+            },
+            "schedulerName": "default-scheduler"
+          }
+        }
+      },
+      "status": {
+        "conditions": [
+          {
+            "type": "Complete",
+            "status": "True",
+            "lastProbeTime": "2023-04-15T08:30:24Z",
+            "lastTransitionTime": "2023-04-15T08:30:24Z"
+          }
+        ],
+        "startTime": "2023-04-15T08:30:00Z",
+        "completionTime": "2023-04-15T08:30:24Z",
+        "succeeded": 1
+      }
+    },
+    {
+      "metadata": {
+        "name": "dkosv3-etcdbackup-1681187040",
+        "namespace": "kakao-system",
+        "selfLink": "/apis/batch/v1/namespaces/kakao-system/jobs/dkosv3-etcdbackup-1681187040",
+        "uid": "5559c4b6-068e-4e4b-a969-42fe5201ee95",
+        "resourceVersion": "4858925",
+        "creationTimestamp": "2023-04-11T04:24:05Z",
+        "labels": {
+          "controller-uid": "5559c4b6-068e-4e4b-a969-42fe5201ee95",
+          "job-name": "dkosv3-etcdbackup-1681187040"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "batch/v1beta1",
+            "kind": "CronJob",
+            "name": "dkosv3-etcdbackup",
+            "uid": "af234649-7f92-4881-a39c-bc838a7dfa08",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "batch/v1",
+            "time": "2023-04-11T04:24:09Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {"f:metadata":{"f:ownerReferences":{".":{},"k:{\"uid\":\"af234649-7f92-4881-a39c-bc838a7dfa08\"}":{".":{},"f:apiVersion":{},"f:blockOwnerDeletion":{},"f:controller":{},"f:kind":{},"f:name":{},"f:uid":{}}}},"f:spec":{"f:backoffLimit":{},"f:completions":{},"f:parallelism":{},"f:template":{"f:spec":{"f:affinity":{".":{},"f:nodeAffinity":{".":{},"f:requiredDuringSchedulingIgnoredDuringExecution":{".":{},"f:nodeSelectorTerms":{}}}},"f:containers":{"k:{\"name\":\"dkosv3-etcdbackup\"}":{".":{},"f:env":{".":{},"k:{\"name\":\"DKOSV3_CLUSTER_NAME\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_CLUSTER_UUID\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_CLUSTER_ZONE\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_ETCD_CERT_PATH\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_ETCD_ENDPOINTS\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_ETCD_KEY_PATH\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_METAKAGE_AUTH_ID\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_METAKAGE_URL\"}":{".":{},"f:name":{},"f:value":{}}},"f:image":{},"f:imagePullPolicy":{},"f:name":{},"f:resources":{".":{},"f:limits":{".":{},"f:memory":{}},"f:requests":{".":{},"f:memory":{}}},"f:terminationMessagePath":{},"f:terminationMessagePolicy":{},"f:volumeMounts":{".":{},"k:{\"mountPath\":\"/etc/kubernetes/ssl/etcd\"}":{".":{},"f:mountPath":{},"f:name":{},"f:readOnly":{}},"k:{\"mountPath\":\"/etc/localtime\"}":{".":{},"f:mountPath":{},"f:name":{},"f:readOnly":{}}}}},"f:dnsPolicy":{},"f:restartPolicy":{},"f:schedulerName":{},"f:securityContext":{},"f:serviceAccount":{},"f:serviceAccountName":{},"f:terminationGracePeriodSeconds":{},"f:tolerations":{},"f:volumes":{".":{},"k:{\"name\":\"etcdcerts\"}":{".":{},"f:hostPath":{".":{},"f:path":{},"f:type":{}},"f:name":{}},"k:{\"name\":\"tz-config\"}":{".":{},"f:hostPath":{".":{},"f:path":{},"f:type":{}},"f:name":{}}}}}},"f:status":{"f:completionTime":{},"f:conditions":{".":{},"k:{\"type\":\"Complete\"}":{".":{},"f:lastProbeTime":{},"f:lastTransitionTime":{},"f:status":{},"f:type":{}}},"f:startTime":{},"f:succeeded":{}}}
+          }
+        ]
+      },
+      "spec": {
+        "parallelism": 1,
+        "completions": 1,
+        "backoffLimit": 6,
+        "selector": {
+          "matchLabels": {
+            "controller-uid": "5559c4b6-068e-4e4b-a969-42fe5201ee95"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "controller-uid": "5559c4b6-068e-4e4b-a969-42fe5201ee95",
+              "job-name": "dkosv3-etcdbackup-1681187040"
+            }
+          },
+          "spec": {
+            "volumes": [
+              {
+                "name": "tz-config",
+                "hostPath": {
+                  "path": "/etc/localtime",
+                  "type": ""
+                }
+              },
+              {
+                "name": "etcdcerts",
+                "hostPath": {
+                  "path": "/etc/kubernetes/ssl/etcd",
+                  "type": ""
+                }
+              }
+            ],
+            "containers": [
+              {
+                "name": "dkosv3-etcdbackup",
+                "image": "idock.daumkakao.io/dkos/kakao-etcd-backup:v0.4",
+                "env": [
+                  {
+                    "name": "DKOSV3_METAKAGE_AUTH_ID",
+                    "value": "dkosv3"
+                  },
+                  {
+                    "name": "DKOSV3_METAKAGE_URL",
+                    "value": "https://api-metakage-4misc.kakao.com"
+                  },
+                  {
+                    "name": "DKOSV3_CLUSTER_UUID",
+                    "value": "dd20ea1d-d387-40f9-9093-56d6c91105cc"
+                  },
+                  {
+                    "name": "DKOSV3_CLUSTER_NAME",
+                    "value": "poi-cluster"
+                  },
+                  {
+                    "name": "DKOSV3_CLUSTER_ZONE",
+                    "value": "Dev_Zone"
+                  },
+                  {
+                    "name": "DKOSV3_ETCD_KEY_PATH",
+                    "value": "/etc/kubernetes/ssl/etcd/etcd-ca.key"
+                  },
+                  {
+                    "name": "DKOSV3_ETCD_CERT_PATH",
+                    "value": "/etc/kubernetes/ssl/etcd/etcd-ca.crt"
+                  },
+                  {
+                    "name": "DKOSV3_ETCD_ENDPOINTS",
+                    "value": "dkosv3-poi-cluster-master-1.ay1.krane.9rum.cc:2379"
+                  }
+                ],
+                "resources": {
+                  "limits": {
+                    "memory": "2Gi"
+                  },
+                  "requests": {
+                    "memory": "512Mi"
+                  }
+                },
+                "volumeMounts": [
+                  {
+                    "name": "tz-config",
+                    "readOnly": true,
+                    "mountPath": "/etc/localtime"
+                  },
+                  {
+                    "name": "etcdcerts",
+                    "readOnly": true,
+                    "mountPath": "/etc/kubernetes/ssl/etcd"
+                  }
+                ],
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent"
+              }
+            ],
+            "restartPolicy": "Never",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "etcdbackup",
+            "serviceAccount": "etcdbackup",
+            "securityContext": {
+              
+            },
+            "affinity": {
+              "nodeAffinity": {
+                "requiredDuringSchedulingIgnoredDuringExecution": {
+                  "nodeSelectorTerms": [
+                    {
+                      "matchExpressions": [
+                        {
+                          "key": "node-role.kubernetes.io/master",
+                          "operator": "Exists"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "schedulerName": "default-scheduler",
+            "tolerations": [
+              {
+                "key": "node-role.kubernetes.io/master",
+                "effect": "NoSchedule"
+              }
+            ]
+          }
+        }
+      },
+      "status": {
+        "conditions": [
+          {
+            "type": "Complete",
+            "status": "True",
+            "lastProbeTime": "2023-04-11T04:24:09Z",
+            "lastTransitionTime": "2023-04-11T04:24:09Z"
+          }
+        ],
+        "startTime": "2023-04-11T04:24:05Z",
+        "completionTime": "2023-04-11T04:24:09Z",
+        "succeeded": 1
+      }
+    },
+    {
+      "metadata": {
+        "name": "dkosv3-etcdbackup-1681273440",
+        "namespace": "kakao-system",
+        "selfLink": "/apis/batch/v1/namespaces/kakao-system/jobs/dkosv3-etcdbackup-1681273440",
+        "uid": "ffc27dbf-a0b7-46cc-a424-6abcd6db115e",
+        "resourceVersion": "5299579",
+        "creationTimestamp": "2023-04-12T04:24:09Z",
+        "labels": {
+          "controller-uid": "ffc27dbf-a0b7-46cc-a424-6abcd6db115e",
+          "job-name": "dkosv3-etcdbackup-1681273440"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "batch/v1beta1",
+            "kind": "CronJob",
+            "name": "dkosv3-etcdbackup",
+            "uid": "af234649-7f92-4881-a39c-bc838a7dfa08",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "batch/v1",
+            "time": "2023-04-12T04:24:12Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {"f:metadata":{"f:ownerReferences":{".":{},"k:{\"uid\":\"af234649-7f92-4881-a39c-bc838a7dfa08\"}":{".":{},"f:apiVersion":{},"f:blockOwnerDeletion":{},"f:controller":{},"f:kind":{},"f:name":{},"f:uid":{}}}},"f:spec":{"f:backoffLimit":{},"f:completions":{},"f:parallelism":{},"f:template":{"f:spec":{"f:affinity":{".":{},"f:nodeAffinity":{".":{},"f:requiredDuringSchedulingIgnoredDuringExecution":{".":{},"f:nodeSelectorTerms":{}}}},"f:containers":{"k:{\"name\":\"dkosv3-etcdbackup\"}":{".":{},"f:env":{".":{},"k:{\"name\":\"DKOSV3_CLUSTER_NAME\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_CLUSTER_UUID\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_CLUSTER_ZONE\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_ETCD_CERT_PATH\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_ETCD_ENDPOINTS\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_ETCD_KEY_PATH\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_METAKAGE_AUTH_ID\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_METAKAGE_URL\"}":{".":{},"f:name":{},"f:value":{}}},"f:image":{},"f:imagePullPolicy":{},"f:name":{},"f:resources":{".":{},"f:limits":{".":{},"f:memory":{}},"f:requests":{".":{},"f:memory":{}}},"f:terminationMessagePath":{},"f:terminationMessagePolicy":{},"f:volumeMounts":{".":{},"k:{\"mountPath\":\"/etc/kubernetes/ssl/etcd\"}":{".":{},"f:mountPath":{},"f:name":{},"f:readOnly":{}},"k:{\"mountPath\":\"/etc/localtime\"}":{".":{},"f:mountPath":{},"f:name":{},"f:readOnly":{}}}}},"f:dnsPolicy":{},"f:restartPolicy":{},"f:schedulerName":{},"f:securityContext":{},"f:serviceAccount":{},"f:serviceAccountName":{},"f:terminationGracePeriodSeconds":{},"f:tolerations":{},"f:volumes":{".":{},"k:{\"name\":\"etcdcerts\"}":{".":{},"f:hostPath":{".":{},"f:path":{},"f:type":{}},"f:name":{}},"k:{\"name\":\"tz-config\"}":{".":{},"f:hostPath":{".":{},"f:path":{},"f:type":{}},"f:name":{}}}}}},"f:status":{"f:completionTime":{},"f:conditions":{".":{},"k:{\"type\":\"Complete\"}":{".":{},"f:lastProbeTime":{},"f:lastTransitionTime":{},"f:status":{},"f:type":{}}},"f:startTime":{},"f:succeeded":{}}}
+          }
+        ]
+      },
+      "spec": {
+        "parallelism": 1,
+        "completions": 1,
+        "backoffLimit": 6,
+        "selector": {
+          "matchLabels": {
+            "controller-uid": "ffc27dbf-a0b7-46cc-a424-6abcd6db115e"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "controller-uid": "ffc27dbf-a0b7-46cc-a424-6abcd6db115e",
+              "job-name": "dkosv3-etcdbackup-1681273440"
+            }
+          },
+          "spec": {
+            "volumes": [
+              {
+                "name": "tz-config",
+                "hostPath": {
+                  "path": "/etc/localtime",
+                  "type": ""
+                }
+              },
+              {
+                "name": "etcdcerts",
+                "hostPath": {
+                  "path": "/etc/kubernetes/ssl/etcd",
+                  "type": ""
+                }
+              }
+            ],
+            "containers": [
+              {
+                "name": "dkosv3-etcdbackup",
+                "image": "idock.daumkakao.io/dkos/kakao-etcd-backup:v0.4",
+                "env": [
+                  {
+                    "name": "DKOSV3_METAKAGE_AUTH_ID",
+                    "value": "dkosv3"
+                  },
+                  {
+                    "name": "DKOSV3_METAKAGE_URL",
+                    "value": "https://api-metakage-4misc.kakao.com"
+                  },
+                  {
+                    "name": "DKOSV3_CLUSTER_UUID",
+                    "value": "dd20ea1d-d387-40f9-9093-56d6c91105cc"
+                  },
+                  {
+                    "name": "DKOSV3_CLUSTER_NAME",
+                    "value": "poi-cluster"
+                  },
+                  {
+                    "name": "DKOSV3_CLUSTER_ZONE",
+                    "value": "Dev_Zone"
+                  },
+                  {
+                    "name": "DKOSV3_ETCD_KEY_PATH",
+                    "value": "/etc/kubernetes/ssl/etcd/etcd-ca.key"
+                  },
+                  {
+                    "name": "DKOSV3_ETCD_CERT_PATH",
+                    "value": "/etc/kubernetes/ssl/etcd/etcd-ca.crt"
+                  },
+                  {
+                    "name": "DKOSV3_ETCD_ENDPOINTS",
+                    "value": "dkosv3-poi-cluster-master-1.ay1.krane.9rum.cc:2379"
+                  }
+                ],
+                "resources": {
+                  "limits": {
+                    "memory": "2Gi"
+                  },
+                  "requests": {
+                    "memory": "512Mi"
+                  }
+                },
+                "volumeMounts": [
+                  {
+                    "name": "tz-config",
+                    "readOnly": true,
+                    "mountPath": "/etc/localtime"
+                  },
+                  {
+                    "name": "etcdcerts",
+                    "readOnly": true,
+                    "mountPath": "/etc/kubernetes/ssl/etcd"
+                  }
+                ],
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent"
+              }
+            ],
+            "restartPolicy": "Never",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "etcdbackup",
+            "serviceAccount": "etcdbackup",
+            "securityContext": {
+              
+            },
+            "affinity": {
+              "nodeAffinity": {
+                "requiredDuringSchedulingIgnoredDuringExecution": {
+                  "nodeSelectorTerms": [
+                    {
+                      "matchExpressions": [
+                        {
+                          "key": "node-role.kubernetes.io/master",
+                          "operator": "Exists"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "schedulerName": "default-scheduler",
+            "tolerations": [
+              {
+                "key": "node-role.kubernetes.io/master",
+                "effect": "NoSchedule"
+              }
+            ]
+          }
+        }
+      },
+      "status": {
+        "conditions": [
+          {
+            "type": "Complete",
+            "status": "True",
+            "lastProbeTime": "2023-04-12T04:24:12Z",
+            "lastTransitionTime": "2023-04-12T04:24:12Z"
+          }
+        ],
+        "startTime": "2023-04-12T04:24:10Z",
+        "completionTime": "2023-04-12T04:24:12Z",
+        "succeeded": 1
+      }
+    },
+    {
+      "metadata": {
+        "name": "dkosv3-etcdbackup-1681359840",
+        "namespace": "kakao-system",
+        "selfLink": "/apis/batch/v1/namespaces/kakao-system/jobs/dkosv3-etcdbackup-1681359840",
+        "uid": "785da815-c4ba-45a9-aa00-af08751f9d6e",
+        "resourceVersion": "5739767",
+        "creationTimestamp": "2023-04-13T04:24:04Z",
+        "labels": {
+          "controller-uid": "785da815-c4ba-45a9-aa00-af08751f9d6e",
+          "job-name": "dkosv3-etcdbackup-1681359840"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "batch/v1beta1",
+            "kind": "CronJob",
+            "name": "dkosv3-etcdbackup",
+            "uid": "af234649-7f92-4881-a39c-bc838a7dfa08",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "batch/v1",
+            "time": "2023-04-13T04:24:07Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {"f:metadata":{"f:ownerReferences":{".":{},"k:{\"uid\":\"af234649-7f92-4881-a39c-bc838a7dfa08\"}":{".":{},"f:apiVersion":{},"f:blockOwnerDeletion":{},"f:controller":{},"f:kind":{},"f:name":{},"f:uid":{}}}},"f:spec":{"f:backoffLimit":{},"f:completions":{},"f:parallelism":{},"f:template":{"f:spec":{"f:affinity":{".":{},"f:nodeAffinity":{".":{},"f:requiredDuringSchedulingIgnoredDuringExecution":{".":{},"f:nodeSelectorTerms":{}}}},"f:containers":{"k:{\"name\":\"dkosv3-etcdbackup\"}":{".":{},"f:env":{".":{},"k:{\"name\":\"DKOSV3_CLUSTER_NAME\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_CLUSTER_UUID\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_CLUSTER_ZONE\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_ETCD_CERT_PATH\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_ETCD_ENDPOINTS\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_ETCD_KEY_PATH\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_METAKAGE_AUTH_ID\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_METAKAGE_URL\"}":{".":{},"f:name":{},"f:value":{}}},"f:image":{},"f:imagePullPolicy":{},"f:name":{},"f:resources":{".":{},"f:limits":{".":{},"f:memory":{}},"f:requests":{".":{},"f:memory":{}}},"f:terminationMessagePath":{},"f:terminationMessagePolicy":{},"f:volumeMounts":{".":{},"k:{\"mountPath\":\"/etc/kubernetes/ssl/etcd\"}":{".":{},"f:mountPath":{},"f:name":{},"f:readOnly":{}},"k:{\"mountPath\":\"/etc/localtime\"}":{".":{},"f:mountPath":{},"f:name":{},"f:readOnly":{}}}}},"f:dnsPolicy":{},"f:restartPolicy":{},"f:schedulerName":{},"f:securityContext":{},"f:serviceAccount":{},"f:serviceAccountName":{},"f:terminationGracePeriodSeconds":{},"f:tolerations":{},"f:volumes":{".":{},"k:{\"name\":\"etcdcerts\"}":{".":{},"f:hostPath":{".":{},"f:path":{},"f:type":{}},"f:name":{}},"k:{\"name\":\"tz-config\"}":{".":{},"f:hostPath":{".":{},"f:path":{},"f:type":{}},"f:name":{}}}}}},"f:status":{"f:completionTime":{},"f:conditions":{".":{},"k:{\"type\":\"Complete\"}":{".":{},"f:lastProbeTime":{},"f:lastTransitionTime":{},"f:status":{},"f:type":{}}},"f:startTime":{},"f:succeeded":{}}}
+          }
+        ]
+      },
+      "spec": {
+        "parallelism": 1,
+        "completions": 1,
+        "backoffLimit": 6,
+        "selector": {
+          "matchLabels": {
+            "controller-uid": "785da815-c4ba-45a9-aa00-af08751f9d6e"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "controller-uid": "785da815-c4ba-45a9-aa00-af08751f9d6e",
+              "job-name": "dkosv3-etcdbackup-1681359840"
+            }
+          },
+          "spec": {
+            "volumes": [
+              {
+                "name": "tz-config",
+                "hostPath": {
+                  "path": "/etc/localtime",
+                  "type": ""
+                }
+              },
+              {
+                "name": "etcdcerts",
+                "hostPath": {
+                  "path": "/etc/kubernetes/ssl/etcd",
+                  "type": ""
+                }
+              }
+            ],
+            "containers": [
+              {
+                "name": "dkosv3-etcdbackup",
+                "image": "idock.daumkakao.io/dkos/kakao-etcd-backup:v0.4",
+                "env": [
+                  {
+                    "name": "DKOSV3_METAKAGE_AUTH_ID",
+                    "value": "dkosv3"
+                  },
+                  {
+                    "name": "DKOSV3_METAKAGE_URL",
+                    "value": "https://api-metakage-4misc.kakao.com"
+                  },
+                  {
+                    "name": "DKOSV3_CLUSTER_UUID",
+                    "value": "dd20ea1d-d387-40f9-9093-56d6c91105cc"
+                  },
+                  {
+                    "name": "DKOSV3_CLUSTER_NAME",
+                    "value": "poi-cluster"
+                  },
+                  {
+                    "name": "DKOSV3_CLUSTER_ZONE",
+                    "value": "Dev_Zone"
+                  },
+                  {
+                    "name": "DKOSV3_ETCD_KEY_PATH",
+                    "value": "/etc/kubernetes/ssl/etcd/etcd-ca.key"
+                  },
+                  {
+                    "name": "DKOSV3_ETCD_CERT_PATH",
+                    "value": "/etc/kubernetes/ssl/etcd/etcd-ca.crt"
+                  },
+                  {
+                    "name": "DKOSV3_ETCD_ENDPOINTS",
+                    "value": "dkosv3-poi-cluster-master-1.ay1.krane.9rum.cc:2379"
+                  }
+                ],
+                "resources": {
+                  "limits": {
+                    "memory": "2Gi"
+                  },
+                  "requests": {
+                    "memory": "512Mi"
+                  }
+                },
+                "volumeMounts": [
+                  {
+                    "name": "tz-config",
+                    "readOnly": true,
+                    "mountPath": "/etc/localtime"
+                  },
+                  {
+                    "name": "etcdcerts",
+                    "readOnly": true,
+                    "mountPath": "/etc/kubernetes/ssl/etcd"
+                  }
+                ],
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent"
+              }
+            ],
+            "restartPolicy": "Never",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "etcdbackup",
+            "serviceAccount": "etcdbackup",
+            "securityContext": {
+              
+            },
+            "affinity": {
+              "nodeAffinity": {
+                "requiredDuringSchedulingIgnoredDuringExecution": {
+                  "nodeSelectorTerms": [
+                    {
+                      "matchExpressions": [
+                        {
+                          "key": "node-role.kubernetes.io/master",
+                          "operator": "Exists"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "schedulerName": "default-scheduler",
+            "tolerations": [
+              {
+                "key": "node-role.kubernetes.io/master",
+                "effect": "NoSchedule"
+              }
+            ]
+          }
+        }
+      },
+      "status": {
+        "conditions": [
+          {
+            "type": "Complete",
+            "status": "True",
+            "lastProbeTime": "2023-04-13T04:24:07Z",
+            "lastTransitionTime": "2023-04-13T04:24:07Z"
+          }
+        ],
+        "startTime": "2023-04-13T04:24:04Z",
+        "completionTime": "2023-04-13T04:24:07Z",
+        "succeeded": 1
+      }
+    },
+    {
+      "metadata": {
+        "name": "dkosv3-etcdbackup-1681446240",
+        "namespace": "kakao-system",
+        "selfLink": "/apis/batch/v1/namespaces/kakao-system/jobs/dkosv3-etcdbackup-1681446240",
+        "uid": "bad16283-1a3a-49d1-9e68-ee99c8556550",
+        "resourceVersion": "6180091",
+        "creationTimestamp": "2023-04-14T04:24:08Z",
+        "labels": {
+          "controller-uid": "bad16283-1a3a-49d1-9e68-ee99c8556550",
+          "job-name": "dkosv3-etcdbackup-1681446240"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "batch/v1beta1",
+            "kind": "CronJob",
+            "name": "dkosv3-etcdbackup",
+            "uid": "af234649-7f92-4881-a39c-bc838a7dfa08",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "batch/v1",
+            "time": "2023-04-14T04:24:12Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {"f:metadata":{"f:ownerReferences":{".":{},"k:{\"uid\":\"af234649-7f92-4881-a39c-bc838a7dfa08\"}":{".":{},"f:apiVersion":{},"f:blockOwnerDeletion":{},"f:controller":{},"f:kind":{},"f:name":{},"f:uid":{}}}},"f:spec":{"f:backoffLimit":{},"f:completions":{},"f:parallelism":{},"f:template":{"f:spec":{"f:affinity":{".":{},"f:nodeAffinity":{".":{},"f:requiredDuringSchedulingIgnoredDuringExecution":{".":{},"f:nodeSelectorTerms":{}}}},"f:containers":{"k:{\"name\":\"dkosv3-etcdbackup\"}":{".":{},"f:env":{".":{},"k:{\"name\":\"DKOSV3_CLUSTER_NAME\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_CLUSTER_UUID\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_CLUSTER_ZONE\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_ETCD_CERT_PATH\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_ETCD_ENDPOINTS\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_ETCD_KEY_PATH\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_METAKAGE_AUTH_ID\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_METAKAGE_URL\"}":{".":{},"f:name":{},"f:value":{}}},"f:image":{},"f:imagePullPolicy":{},"f:name":{},"f:resources":{".":{},"f:limits":{".":{},"f:memory":{}},"f:requests":{".":{},"f:memory":{}}},"f:terminationMessagePath":{},"f:terminationMessagePolicy":{},"f:volumeMounts":{".":{},"k:{\"mountPath\":\"/etc/kubernetes/ssl/etcd\"}":{".":{},"f:mountPath":{},"f:name":{},"f:readOnly":{}},"k:{\"mountPath\":\"/etc/localtime\"}":{".":{},"f:mountPath":{},"f:name":{},"f:readOnly":{}}}}},"f:dnsPolicy":{},"f:restartPolicy":{},"f:schedulerName":{},"f:securityContext":{},"f:serviceAccount":{},"f:serviceAccountName":{},"f:terminationGracePeriodSeconds":{},"f:tolerations":{},"f:volumes":{".":{},"k:{\"name\":\"etcdcerts\"}":{".":{},"f:hostPath":{".":{},"f:path":{},"f:type":{}},"f:name":{}},"k:{\"name\":\"tz-config\"}":{".":{},"f:hostPath":{".":{},"f:path":{},"f:type":{}},"f:name":{}}}}}},"f:status":{"f:completionTime":{},"f:conditions":{".":{},"k:{\"type\":\"Complete\"}":{".":{},"f:lastProbeTime":{},"f:lastTransitionTime":{},"f:status":{},"f:type":{}}},"f:startTime":{},"f:succeeded":{}}}
+          }
+        ]
+      },
+      "spec": {
+        "parallelism": 1,
+        "completions": 1,
+        "backoffLimit": 6,
+        "selector": {
+          "matchLabels": {
+            "controller-uid": "bad16283-1a3a-49d1-9e68-ee99c8556550"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "controller-uid": "bad16283-1a3a-49d1-9e68-ee99c8556550",
+              "job-name": "dkosv3-etcdbackup-1681446240"
+            }
+          },
+          "spec": {
+            "volumes": [
+              {
+                "name": "tz-config",
+                "hostPath": {
+                  "path": "/etc/localtime",
+                  "type": ""
+                }
+              },
+              {
+                "name": "etcdcerts",
+                "hostPath": {
+                  "path": "/etc/kubernetes/ssl/etcd",
+                  "type": ""
+                }
+              }
+            ],
+            "containers": [
+              {
+                "name": "dkosv3-etcdbackup",
+                "image": "idock.daumkakao.io/dkos/kakao-etcd-backup:v0.4",
+                "env": [
+                  {
+                    "name": "DKOSV3_METAKAGE_AUTH_ID",
+                    "value": "dkosv3"
+                  },
+                  {
+                    "name": "DKOSV3_METAKAGE_URL",
+                    "value": "https://api-metakage-4misc.kakao.com"
+                  },
+                  {
+                    "name": "DKOSV3_CLUSTER_UUID",
+                    "value": "dd20ea1d-d387-40f9-9093-56d6c91105cc"
+                  },
+                  {
+                    "name": "DKOSV3_CLUSTER_NAME",
+                    "value": "poi-cluster"
+                  },
+                  {
+                    "name": "DKOSV3_CLUSTER_ZONE",
+                    "value": "Dev_Zone"
+                  },
+                  {
+                    "name": "DKOSV3_ETCD_KEY_PATH",
+                    "value": "/etc/kubernetes/ssl/etcd/etcd-ca.key"
+                  },
+                  {
+                    "name": "DKOSV3_ETCD_CERT_PATH",
+                    "value": "/etc/kubernetes/ssl/etcd/etcd-ca.crt"
+                  },
+                  {
+                    "name": "DKOSV3_ETCD_ENDPOINTS",
+                    "value": "dkosv3-poi-cluster-master-1.ay1.krane.9rum.cc:2379"
+                  }
+                ],
+                "resources": {
+                  "limits": {
+                    "memory": "2Gi"
+                  },
+                  "requests": {
+                    "memory": "512Mi"
+                  }
+                },
+                "volumeMounts": [
+                  {
+                    "name": "tz-config",
+                    "readOnly": true,
+                    "mountPath": "/etc/localtime"
+                  },
+                  {
+                    "name": "etcdcerts",
+                    "readOnly": true,
+                    "mountPath": "/etc/kubernetes/ssl/etcd"
+                  }
+                ],
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent"
+              }
+            ],
+            "restartPolicy": "Never",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "etcdbackup",
+            "serviceAccount": "etcdbackup",
+            "securityContext": {
+              
+            },
+            "affinity": {
+              "nodeAffinity": {
+                "requiredDuringSchedulingIgnoredDuringExecution": {
+                  "nodeSelectorTerms": [
+                    {
+                      "matchExpressions": [
+                        {
+                          "key": "node-role.kubernetes.io/master",
+                          "operator": "Exists"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "schedulerName": "default-scheduler",
+            "tolerations": [
+              {
+                "key": "node-role.kubernetes.io/master",
+                "effect": "NoSchedule"
+              }
+            ]
+          }
+        }
+      },
+      "status": {
+        "conditions": [
+          {
+            "type": "Complete",
+            "status": "True",
+            "lastProbeTime": "2023-04-14T04:24:12Z",
+            "lastTransitionTime": "2023-04-14T04:24:12Z"
+          }
+        ],
+        "startTime": "2023-04-14T04:24:08Z",
+        "completionTime": "2023-04-14T04:24:12Z",
+        "succeeded": 1
+      }
+    },
+    {
+      "metadata": {
+        "name": "dkosv3-etcdbackup-1681532640",
+        "namespace": "kakao-system",
+        "selfLink": "/apis/batch/v1/namespaces/kakao-system/jobs/dkosv3-etcdbackup-1681532640",
+        "uid": "08c271a3-e3a4-488f-a957-5bc0b16faa30",
+        "resourceVersion": "6620210",
+        "creationTimestamp": "2023-04-15T04:24:03Z",
+        "labels": {
+          "controller-uid": "08c271a3-e3a4-488f-a957-5bc0b16faa30",
+          "job-name": "dkosv3-etcdbackup-1681532640"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "batch/v1beta1",
+            "kind": "CronJob",
+            "name": "dkosv3-etcdbackup",
+            "uid": "af234649-7f92-4881-a39c-bc838a7dfa08",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "batch/v1",
+            "time": "2023-04-15T04:24:06Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {"f:metadata":{"f:ownerReferences":{".":{},"k:{\"uid\":\"af234649-7f92-4881-a39c-bc838a7dfa08\"}":{".":{},"f:apiVersion":{},"f:blockOwnerDeletion":{},"f:controller":{},"f:kind":{},"f:name":{},"f:uid":{}}}},"f:spec":{"f:backoffLimit":{},"f:completions":{},"f:parallelism":{},"f:template":{"f:spec":{"f:affinity":{".":{},"f:nodeAffinity":{".":{},"f:requiredDuringSchedulingIgnoredDuringExecution":{".":{},"f:nodeSelectorTerms":{}}}},"f:containers":{"k:{\"name\":\"dkosv3-etcdbackup\"}":{".":{},"f:env":{".":{},"k:{\"name\":\"DKOSV3_CLUSTER_NAME\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_CLUSTER_UUID\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_CLUSTER_ZONE\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_ETCD_CERT_PATH\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_ETCD_ENDPOINTS\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_ETCD_KEY_PATH\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_METAKAGE_AUTH_ID\"}":{".":{},"f:name":{},"f:value":{}},"k:{\"name\":\"DKOSV3_METAKAGE_URL\"}":{".":{},"f:name":{},"f:value":{}}},"f:image":{},"f:imagePullPolicy":{},"f:name":{},"f:resources":{".":{},"f:limits":{".":{},"f:memory":{}},"f:requests":{".":{},"f:memory":{}}},"f:terminationMessagePath":{},"f:terminationMessagePolicy":{},"f:volumeMounts":{".":{},"k:{\"mountPath\":\"/etc/kubernetes/ssl/etcd\"}":{".":{},"f:mountPath":{},"f:name":{},"f:readOnly":{}},"k:{\"mountPath\":\"/etc/localtime\"}":{".":{},"f:mountPath":{},"f:name":{},"f:readOnly":{}}}}},"f:dnsPolicy":{},"f:restartPolicy":{},"f:schedulerName":{},"f:securityContext":{},"f:serviceAccount":{},"f:serviceAccountName":{},"f:terminationGracePeriodSeconds":{},"f:tolerations":{},"f:volumes":{".":{},"k:{\"name\":\"etcdcerts\"}":{".":{},"f:hostPath":{".":{},"f:path":{},"f:type":{}},"f:name":{}},"k:{\"name\":\"tz-config\"}":{".":{},"f:hostPath":{".":{},"f:path":{},"f:type":{}},"f:name":{}}}}}},"f:status":{"f:completionTime":{},"f:conditions":{".":{},"k:{\"type\":\"Complete\"}":{".":{},"f:lastProbeTime":{},"f:lastTransitionTime":{},"f:status":{},"f:type":{}}},"f:startTime":{},"f:succeeded":{}}}
+          }
+        ]
+      },
+      "spec": {
+        "parallelism": 1,
+        "completions": 1,
+        "backoffLimit": 6,
+        "selector": {
+          "matchLabels": {
+            "controller-uid": "08c271a3-e3a4-488f-a957-5bc0b16faa30"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "controller-uid": "08c271a3-e3a4-488f-a957-5bc0b16faa30",
+              "job-name": "dkosv3-etcdbackup-1681532640"
+            }
+          },
+          "spec": {
+            "volumes": [
+              {
+                "name": "tz-config",
+                "hostPath": {
+                  "path": "/etc/localtime",
+                  "type": ""
+                }
+              },
+              {
+                "name": "etcdcerts",
+                "hostPath": {
+                  "path": "/etc/kubernetes/ssl/etcd",
+                  "type": ""
+                }
+              }
+            ],
+            "containers": [
+              {
+                "name": "dkosv3-etcdbackup",
+                "image": "idock.daumkakao.io/dkos/kakao-etcd-backup:v0.4",
+                "env": [
+                  {
+                    "name": "DKOSV3_METAKAGE_AUTH_ID",
+                    "value": "dkosv3"
+                  },
+                  {
+                    "name": "DKOSV3_METAKAGE_URL",
+                    "value": "https://api-metakage-4misc.kakao.com"
+                  },
+                  {
+                    "name": "DKOSV3_CLUSTER_UUID",
+                    "value": "dd20ea1d-d387-40f9-9093-56d6c91105cc"
+                  },
+                  {
+                    "name": "DKOSV3_CLUSTER_NAME",
+                    "value": "poi-cluster"
+                  },
+                  {
+                    "name": "DKOSV3_CLUSTER_ZONE",
+                    "value": "Dev_Zone"
+                  },
+                  {
+                    "name": "DKOSV3_ETCD_KEY_PATH",
+                    "value": "/etc/kubernetes/ssl/etcd/etcd-ca.key"
+                  },
+                  {
+                    "name": "DKOSV3_ETCD_CERT_PATH",
+                    "value": "/etc/kubernetes/ssl/etcd/etcd-ca.crt"
+                  },
+                  {
+                    "name": "DKOSV3_ETCD_ENDPOINTS",
+                    "value": "dkosv3-poi-cluster-master-1.ay1.krane.9rum.cc:2379"
+                  }
+                ],
+                "resources": {
+                  "limits": {
+                    "memory": "2Gi"
+                  },
+                  "requests": {
+                    "memory": "512Mi"
+                  }
+                },
+                "volumeMounts": [
+                  {
+                    "name": "tz-config",
+                    "readOnly": true,
+                    "mountPath": "/etc/localtime"
+                  },
+                  {
+                    "name": "etcdcerts",
+                    "readOnly": true,
+                    "mountPath": "/etc/kubernetes/ssl/etcd"
+                  }
+                ],
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent"
+              }
+            ],
+            "restartPolicy": "Never",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "etcdbackup",
+            "serviceAccount": "etcdbackup",
+            "securityContext": {
+              
+            },
+            "affinity": {
+              "nodeAffinity": {
+                "requiredDuringSchedulingIgnoredDuringExecution": {
+                  "nodeSelectorTerms": [
+                    {
+                      "matchExpressions": [
+                        {
+                          "key": "node-role.kubernetes.io/master",
+                          "operator": "Exists"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "schedulerName": "default-scheduler",
+            "tolerations": [
+              {
+                "key": "node-role.kubernetes.io/master",
+                "effect": "NoSchedule"
+              }
+            ]
+          }
+        }
+      },
+      "status": {
+        "conditions": [
+          {
+            "type": "Complete",
+            "status": "True",
+            "lastProbeTime": "2023-04-15T04:24:06Z",
+            "lastTransitionTime": "2023-04-15T04:24:06Z"
+          }
+        ],
+        "startTime": "2023-04-15T04:24:03Z",
+        "completionTime": "2023-04-15T04:24:06Z",
+        "succeeded": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata: 
+  name: poi-rs
+
+spec:
+  replicas: 1
+  selector: 
+    matchLabels:
+      poi: minam
+  template:
+    metadata:
+      labels:
+        poi: minam
+      annotations:
+        key1: value
+        key2: |
+          a
+          b
+          c
+    spec:
+      volumes:
+        - name: downward
+          downwardAPI:
+            items:
+              - path: "podName"
+                fieldRef:
+                  fieldPath: metadata.name
+              - path: "podNamespace"
+                fieldRef:
+                  fieldPath: metadata.namespace
+              - path: "labels"
+                fieldRef:
+                  fieldPath: metadata.labels
+        - name: html
+          configMap:
+            name: poi-config-html
+            items:
+              - key: poi.html
+                path: rier.html
+      containers:
+        - name: poid4
+          image: poistargram/html
+          args: ["4444"]
+          volumeMounts: 
+            - name: html
+              mountPath: /poi/rier
+            - name: downward
+              mountPath: /poi/downward
+          ports:
+            - name: four
+              containerPort: 4444
